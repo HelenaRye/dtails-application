@@ -116,6 +116,12 @@
             <span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
           </button>
 
+
+{% form 'currency' %}
+  {{ form | currency_selector }}
+  <button type="submit"> Update </button>
+{% endform %}
+
           {% if shop.customer_accounts_enabled %}
             {% if customer %}
               <a href="{{ routes.account_url }}" class="site-header__icon site-header__account">
